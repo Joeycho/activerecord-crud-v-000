@@ -104,7 +104,7 @@ def can_update_multiple_items_at_once
     Movie.update(mov.id, :title => "A Movie")
     mov.save
   end
-  
+
 end
 
 def can_destroy_a_single_item

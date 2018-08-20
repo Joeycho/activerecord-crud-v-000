@@ -94,7 +94,7 @@ def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   mov = Movie.create(title: "Wat?")
   Movie.update(mov.id, :title => "Wat, huh?")
-  __
+  mov.save
 end
 
 def can_update_multiple_items_at_once

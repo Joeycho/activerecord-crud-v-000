@@ -87,7 +87,7 @@ def can_be_found_updated_and_saved
   Movie.create(title: "Awesome Flick")
   mov = Movie.find_by('movies.title' => "Awesome Flick")
   Movie.update(mov.id, :title => "Even Awesomer Flick")
-  Movie.save
+  mov.save
 end
 
 def can_update_using_update_method

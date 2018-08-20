@@ -92,8 +92,8 @@ end
 
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
-  Movie.create(title: "Wat?")
-  __
+  mov = Movie.create(title: "Wat?")
+  Movie.update(mov.id, :title => "Wat, huh?")
   __
 end
 

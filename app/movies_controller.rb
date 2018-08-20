@@ -100,22 +100,21 @@ end
 def can_update_multiple_items_at_once
   # Change title of all movies to "A Movie"
   5.times do |i|
-    mov = Movie.create(title: "Movie_#{i}", release_date: 2000+i)
-    Movie.update(mov.id, :title => "A Movie")
-    mov.save
+    Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
+  Movie.update_all("title => "A Movie"")
+  mov.save
 
 end
 
 def can_destroy_a_single_item
   Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
-  __
-  __
+  Movie.destroy(0)
 end
 
 def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  __
+  Movie.de
 end

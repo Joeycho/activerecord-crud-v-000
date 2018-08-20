@@ -27,7 +27,6 @@ def can_be_created_with_a_hash_of_attributes
   movie.lead = attributes[:lead]
   movie.in_theaters = attributes[:in_theaters]
   movie
-  binding.pry
 end
 
 def can_be_created_in_a_block(title: "Home Alone", release_date: 1990)
